@@ -1,12 +1,22 @@
 .heroCard {
     border: 1px solid;
     border-radius: 25px;
-    padding: 0 1em;
+    padding: 2em 1em;
     margin: auto;
     font-size: large;
     width: 25ch;
     height: 35ch;
+    background-image: linear-gradient(
+        to bottom right,
+        var(--gradient-colors)
+    );
+    display: grid;
+    place-content: center;
+}
 
+.heroCard__content {
+    background-color: white;
+    padding: 0 1em;
     display: flex;
     flex-direction: column;
     justify-content: space-between;

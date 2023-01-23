@@ -6,15 +6,19 @@ export default function HeroCard({
 }: {
     hero: Hero
 }) {
-    return <div className="heroCard">
-        <h2>{hero.name}</h2>
-        <p>{hero.ability}</p>
-        <dl>
-            <dt>Power</dt>
-            <dd>{hero.currentPower}</dd>
+    return <div className="heroCard" style={{
+        '--gradient-colors': hero.suitColors.join(',')
+    } as React.CSSProperties }>
+        <div className="heroCard__content">
+            <h2>{hero.name}</h2>
+            <p>{hero.ability}</p>
+            <dl>
+                <dt>Power</dt>
+                <dd>{hero.currentPower}</dd>
 
-            <dt>Started at</dt>
-            <dd>{String(hero.trainingStartingDate)}</dd>
-        </dl>
+                <dt>Started at</dt>
+                <dd>{String(hero.trainingStartingDate)}</dd>
+            </dl>
+        </div>
     </div>
 }
