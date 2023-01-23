@@ -1,6 +1,6 @@
 {
-  "name": "empty-react-app",
-  "homepage": "/Empty-React-App",
+  "name": "heroes-app",
+  "homepage": "/Heroes",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
