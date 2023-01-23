@@ -1,0 +1,19 @@
+.heroCard {
+    border: 1px solid;
+    border-radius: 25px;
+    padding: 0 1em;
+    margin: auto;
+    font-size: large;
+    width: 25ch;
+    height: 35ch;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    h2 {
+        width: 100%;
+        text-align: center;
+        font-size: 200%;
+    }
+}

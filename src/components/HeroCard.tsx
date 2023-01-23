@@ -1,4 +1,5 @@
-import { Hero } from "../data/HeroesData"
+import type { Hero } from "../data/HeroesData"
+import '../styles/HeroCard.scss';
 
 export default function HeroCard({
     hero
