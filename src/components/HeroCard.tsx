@@ -17,7 +17,7 @@ export default function HeroCard({
                 <dd>{hero.currentPower}</dd>
 
                 <dt>Started at</dt>
-                <dd>{String(hero.trainingStartingDate)}</dd>
+                <dd>{hero.trainingStartingDate.toLocaleDateString()}</dd>
             </dl>
         </div>
     </div>
