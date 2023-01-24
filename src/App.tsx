@@ -1,4 +1,3 @@
-import './App.css';
 import store from './store/store';
 import type { Hero } from './data/HeroesData';
 import uuid from 'react-uuid';
