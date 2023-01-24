@@ -1,4 +1,5 @@
 import store from './store/store';
+import { Routes, Route } from 'react-router-dom';
 import type { Hero } from './data/HeroesData';
 import uuid from 'react-uuid';
 import HeroCard from './components/HeroCard';
@@ -18,10 +19,15 @@ function App() {
   const currentUser = store.getState().user;
 
   return (
-    <div className="App">
-      {currentUser ? currentUser.name : 'login to proceed'}
-      <HeroCard hero={superman} />
-    </div>
+    <Routes>
+      <Route index path="/*" element={
+        <div className="App">
+            {currentUser ? currentUser.name : 'login to proceed'}
+            <HeroCard hero={superman} />
+          </div>
+      } />
+      <Route path="login" element={"login page"} />
+    </Routes>
   );
 }
 
