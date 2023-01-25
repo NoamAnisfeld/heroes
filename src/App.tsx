@@ -1,8 +1,9 @@
-import store from './store/store';
+import { useAppSelector } from './store/store';
 import { Routes, Route } from 'react-router-dom';
 import type { Hero } from './data/HeroesData';
 import uuid from 'react-uuid';
 import HeroCard from './components/HeroCard';
+import LoginForm from './components/login/LoginForm';
 
 function App() {
 
@@ -16,7 +17,7 @@ function App() {
     currentPower: 10000,
   }
 
-  const currentUser = store.getState().user;
+  const currentUser = useAppSelector(state => state.user);
 
   return (
     <Routes>
@@ -26,7 +27,7 @@ function App() {
             <HeroCard hero={superman} />
           </div>
       } />
-      <Route path="login" element={"login page"} />
+      <Route path="login" element={<LoginForm />} />
     </Routes>
   );
 }
