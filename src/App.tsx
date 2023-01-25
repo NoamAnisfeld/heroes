@@ -17,13 +17,13 @@ function App() {
     currentPower: 10000,
   }
 
-  const currentUser = useAppSelector(state => state.user);
+  const currentUsername = useAppSelector(state => state.user?.name);
 
   return (
     <Routes>
       <Route index path="/*" element={
         <div className="App">
-            {currentUser ? currentUser.name : 'login to proceed'}
+            {currentUsername || 'login to proceed'}
             <HeroCard hero={superman} />
           </div>
       } />
