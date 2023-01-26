@@ -1,8 +1,11 @@
+@import './mixins.scss';
+
 .heroCard {
+    @include centered;
+    @include center-content;
     border: 1px solid;
     border-radius: 25px;
     padding: 2em 1em;
-    margin: auto;
     font-size: large;
     width: 25ch;
     height: 35ch;
@@ -10,8 +13,6 @@
         to bottom right,
         var(--gradient-colors)
     );
-    display: grid;
-    place-content: center;
 }
 
 .heroCard__content {
