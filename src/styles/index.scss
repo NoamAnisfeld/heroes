@@ -1,0 +1,19 @@
+@import './mixins';
+
+html {
+    font-size: large;
+}
+
+html, body, .App {
+    min-height: 100vh;
+}
+
+.App {
+    display: grid;
+    grid-template-rows: auto 1fr;
+    align-items: center;
+}
+
+main {
+    @include center-content;
+}
