@@ -20,17 +20,24 @@ function App() {
   const currentUsername = useAppSelector(state => state.user?.name);
 
   return (
-    <Routes>
-      <Route index path="/*" element={
-        <div className="App">
-            {currentUsername || <>
+    <div className="App">
+      <Routes>
+        <Route index path="/*" element={<>
+          <header>{
+            currentUsername || <>
               <Link to="login">Login</Link> to proceed
-            </>}
+            </>
+          }</header>
+          <main>
             <HeroCard hero={superman} />
-          </div>
-      } />
-      <Route path="login" element={<LoginForm />} />
-    </Routes>
+          </main>
+        </>} />
+        <Route path="login" element={<>
+          <header>Login</header>
+          <LoginForm /></>
+        } />
+      </Routes>
+    </div>
   );
 }
 
