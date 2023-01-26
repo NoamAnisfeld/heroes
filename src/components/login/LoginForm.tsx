@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { useAppSelector, useAppDispatch } from "../../store/store";
+import { login, useAppSelector, useAppDispatch } from "../../store/store";
 
 export default function LoginFrom() {
     const loggedInUser = useAppSelector(state => state.user);
@@ -10,7 +10,7 @@ export default function LoginFrom() {
 
     function performLogin() {
         if (username) {
-            dispatch({ type: 'loggedInUser/login', payload: username });
+            dispatch(login(username));
             navigate('/');
         }
     }

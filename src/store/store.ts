@@ -17,6 +17,8 @@ const userSlice = createSlice({
   },
 });
 
+export const { login } = userSlice.actions;
+
 const store = configureStore({
   reducer: {
     user: userSlice.reducer,
