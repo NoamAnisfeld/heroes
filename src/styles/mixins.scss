@@ -6,3 +6,9 @@
     display: grid;
     place-content: center;
 }
+
+@mixin rounded-border($width: 1px, $style: solid, $radius: 25px, $padding: 1em) {
+    border: $width $style;
+    border-radius: $radius;
+    padding: $padding;
+}

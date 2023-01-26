@@ -1,3 +1,4 @@
+import '../../styles/LoginForm.scss';
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { login, useAppSelector, useAppDispatch } from "../../store/store";
@@ -15,7 +16,7 @@ export default function LoginFrom() {
         }
     }
 
-    return <form>
+    return <form className='login-form'>
         <label>Username</label>
         <input type="text"
             onChange={e => setUsername(e.target.value)}

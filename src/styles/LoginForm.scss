@@ -1,0 +1,8 @@
+@import './mixins';
+
+.login-form {
+    @include centered;
+    @include center-content;
+    @include rounded-border;
+    gap: 1em;
+}
