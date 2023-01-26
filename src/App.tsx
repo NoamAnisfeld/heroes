@@ -1,5 +1,5 @@
 import { useAppSelector } from './store/store';
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, Link } from 'react-router-dom';
 import type { Hero } from './data/HeroesData';
 import uuid from 'react-uuid';
 import HeroCard from './components/HeroCard';
@@ -23,7 +23,9 @@ function App() {
     <Routes>
       <Route index path="/*" element={
         <div className="App">
-            {currentUsername || 'login to proceed'}
+            {currentUsername || <>
+              <Link to="login">Login</Link> to proceed
+            </>}
             <HeroCard hero={superman} />
           </div>
       } />
