@@ -10,3 +10,19 @@ export type Hero = {
     startingPower: number,
     currentPower: number,
 }
+
+export type SerializableHero = Omit<Hero, 'trainingStartingDate'> & {
+    trainingStartingDate: number,
+}
+
+export function serializableHero(hero: Hero): SerializableHero {
+    return {...hero,
+        trainingStartingDate: hero.trainingStartingDate.valueOf(),
+    }
+}
+
+export function deserializeHero(hero: SerializableHero): Hero {
+    return {...hero,
+        trainingStartingDate: new Date(hero.trainingStartingDate),
+    }
+}
