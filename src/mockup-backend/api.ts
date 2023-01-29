@@ -1,7 +1,5 @@
 import { fetchDatabase, saveDatabase, UserWithPassword } from "./database";
-import { hash, compare } from "bcrypt";
-
-const HASH_SALT_ROUNDS = 2;
+import hash from "object-hash";
 
 export async function addUser(username: string, password: string) {
     const database = await fetchDatabase(),
@@ -11,7 +9,7 @@ export async function addUser(username: string, password: string) {
     if (existingIndex !== -1) {
         throw Error('username already exists');
     } else {
-        const hashedPassword = await hash(password, HASH_SALT_ROUNDS);
+        const hashedPassword = hash(password);
 
         const newUser: UserWithPassword = {
             username,
@@ -31,7 +29,7 @@ export async function validateCredentials(username: string, password: string) {
         { users } = database,
         user = users.find(user => user.username === username);
     
-    if (user && await compare(password, user.hashedPassword)) {
+    if (user && hash(password) === user.hashedPassword) {
         return true;
     }
     return false;

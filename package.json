@@ -12,8 +12,8 @@
     "@types/node": "^16.11.63",
     "@types/react": "^18.0.21",
     "@types/react-dom": "^18.0.6",
-    "bcrypt": "^5.1.0",
     "gh-pages": "^4.0.0",
+    "object-hash": "^3.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-redux": "^8.0.5",
@@ -50,7 +50,7 @@
     ]
   },
   "devDependencies": {
-    "@types/bcrypt": "^5.0.0",
+    "@types/object-hash": "^3.0.2",
     "sass": "^1.57.1"
   }
 }
