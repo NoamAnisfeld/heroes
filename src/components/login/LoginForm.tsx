@@ -3,7 +3,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { login, useAppSelector, useAppDispatch } from "../../store/store";
 
-export default function LoginFrom() {
+export default function LoginForm() {
     const loggedInUser = useAppSelector(state => state.user);
     const [username, setUsername] = useState('');
     const dispatch = useAppDispatch();
