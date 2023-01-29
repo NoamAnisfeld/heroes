@@ -1,7 +1,9 @@
+import type { SerializableObject } from './SerializationUtils';
+
 type HeroAbility = 'attacker' | 'defender';
 type SuitColor = 'red' | 'green' | 'blue' | 'yellow';
 
-export type Hero = {
+export interface Hero {
     name: string,
     ability: HeroAbility,
     guid: string,
@@ -11,7 +13,8 @@ export type Hero = {
     currentPower: number,
 }
 
-export type SerializableHero = Omit<Hero, 'trainingStartingDate'> & {
+export interface SerializableHero
+    extends SerializableObject, Omit<Hero, 'trainingStartingDate'> {
     trainingStartingDate: number,
 }
 
