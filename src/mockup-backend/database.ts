@@ -1,6 +1,6 @@
 import { SerializableUser } from '../data/UsersData';
 
-interface UserWithPassword extends SerializableUser {
+export interface UserWithPassword extends SerializableUser {
     hashedPassword: string,
 }
 
