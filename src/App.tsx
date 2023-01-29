@@ -2,6 +2,7 @@ import { useAppSelector } from './store/store';
 import { Routes, Route, Link } from 'react-router-dom';
 import Main from './components/main/Main';
 import LoginForm from './components/login/LoginForm';
+import SignUpForm from './components/login/SignUpForm';
 
 function App() {
 
@@ -20,8 +21,9 @@ function App() {
         </>} />
         <Route path="login" element={<>
           <header>Login</header>
-          <LoginForm /></>
-        } />
+          <LoginForm />
+          <SignUpForm />
+        </>} />
       </Routes>
     </div>
   );
