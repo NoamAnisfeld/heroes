@@ -20,8 +20,8 @@ export default function SignUpForm() {
     }
 
     return <>
-        <h2>Not registered yet?</h2>
         <form className='signup-form'>
+            <h2>Not registered yet?</h2>
             <label>Username
                 <input type="text"
                     onChange={e => setUsername(e.target.value)}
