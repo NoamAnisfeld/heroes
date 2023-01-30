@@ -17,3 +17,7 @@ html, body, .App {
 main {
     @include center-content;
 }
+
+button {
+    padding: 0.5em 1em;
+}

@@ -4,13 +4,34 @@
     display: flex;
     flex-wrap: wrap;
     align-content: center;
+    justify-content: space-evenly;
     gap: 1em;
 }
 
-.login-form, .signup-form {
+.login-form,
+.signup-form {
+    flex: 30ch 0 1;
     @include rounded-border;
     display: grid;
     align-content: end;
     gap: 1em;
-    flex-basis: 40%;
+
+    h2 {
+        text-align: center;
+    }
+
+    label {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        gap: 1ch;
+
+        > input {
+            flex-grow: 1;
+        }
+    }
+
+    button {
+        justify-self: center;
+    }
 }

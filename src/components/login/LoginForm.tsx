@@ -19,7 +19,8 @@ export default function LoginForm() {
     return <form className='login-form'>
         <h2>Enter your credentials</h2>
 
-        <label>Username
+        <label>
+            <span>Username</span>
             <input type="text"
                 onChange={e => setUsername(e.target.value)}
             />
