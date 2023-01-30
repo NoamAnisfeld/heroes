@@ -1,4 +1,4 @@
-import '../../styles/LoginForm.scss';
+import '../../styles/LoginPage.scss';
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { login, useAppSelector, useAppDispatch } from "../../store/store";
@@ -17,13 +17,17 @@ export default function LoginForm() {
     }
 
     return <form className='login-form'>
-        <label>Username</label>
-        <input type="text"
-            onChange={e => setUsername(e.target.value)}
-        />
+        <h2>Enter your credentials</h2>
 
-        <label>Password</label>
-        <input type="password" />
+        <label>Username
+            <input type="text"
+                onChange={e => setUsername(e.target.value)}
+            />
+        </label>
+
+        <label>Password
+            <input type="password" />
+        </label>
 
         <button type="button" onClick={performLogin}>Login</button>
     </form>

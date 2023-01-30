@@ -1,4 +1,4 @@
-import '../../styles/SignUpForm.scss';
+import '../../styles/LoginPage.scss';
 import { useState } from 'react';
 import { addUser } from '../../mockup-backend/api';
 

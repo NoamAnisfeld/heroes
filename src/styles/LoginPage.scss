@@ -1,0 +1,16 @@
+@import './mixins';
+
+.login-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    gap: 1em;
+}
+
+.login-form, .signup-form {
+    @include rounded-border;
+    display: grid;
+    align-content: end;
+    gap: 1em;
+    flex-basis: 40%;
+}
