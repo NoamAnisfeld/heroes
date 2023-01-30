@@ -12,8 +12,8 @@
 .signup-form {
     flex: 30ch 0 1;
     @include rounded-border;
-    display: grid;
-    align-content: end;
+    display: flex;
+    flex-direction: column;
     gap: 1em;
 
     h2 {
@@ -32,6 +32,8 @@
     }
 
     button {
-        justify-self: center;
+        width: fit-content;
+        margin-top: auto;
+        align-self: center;
     }
 }

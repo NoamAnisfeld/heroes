@@ -9,7 +9,7 @@ export default function SignUpForm() {
     const [isPasswordFieldInFocus, setIsPasswordFieldInFocus] = useState(false);
     const [success, setSuccess] = useState(false);
     const [failure, setFailure] = useState(false);
-    
+
     const isPasswordValid = validatePasswordShape(password);
 
     async function register() {
@@ -47,18 +47,21 @@ export default function SignUpForm() {
                 />
             </label>
 
-            <p
-                className={[
-                    'info',
-                    password && !isPasswordValid && !isPasswordFieldInFocus ?
-                        'warning'
-                        : ''
-                ].join(' ')}
-            >
-                Password needs to be at least 8 characters long, 
-                and must contain at least 1 capital letter, 
-                one digit and one non-alphanumeric character
-            </p>
+            {!isPasswordValid && (password || isPasswordFieldInFocus) ?
+                <p
+                    className={[
+                        'info',
+                        !isPasswordFieldInFocus ?
+                            'warning'
+                            : ''
+                    ].join(' ')}
+                >
+                    Password needs to be at least 8 characters long,
+                    and must contain at least 1 capital letter,
+                    one digit and one non-alphanumeric character
+                </p>
+                : undefined
+            }
 
             <button
                 type="button"
