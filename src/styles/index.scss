@@ -21,3 +21,14 @@ main {
 button {
     padding: 0.5em 1em;
 }
+
+.info {
+    font-size: smaller;
+}
+
+$warning-color: #f00;
+
+.warning {
+    color: $warning-color;
+    font-weight: bold;
+}
